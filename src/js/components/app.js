@@ -1,10 +1,9 @@
 import React from 'react';
+import Grid from './grid/gridContainer';
 
 const App = () => {
   return (
-    <div>
-      hello
-    </div>
+    <Grid />
   );
 }
 
