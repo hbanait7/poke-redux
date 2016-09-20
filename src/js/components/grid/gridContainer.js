@@ -17,6 +17,8 @@ class Grid extends Component {
 
     const { pokemon } = this.props.grid;
 
+    {console.log(this.props.search)}
+
     const imgStyle = {
       width: '150px',
       height: '120px',
@@ -36,7 +38,6 @@ class Grid extends Component {
       <div>
         {pokemon.map((pokemon, index) => {
           const imgPath = require(`../../api/images/${pokemon.id}.png`);
-
           return (
             <div key={index} className="col-xs-6 col-md-2">
               <Link style={aTagStyle} className="thumbnail">
@@ -54,7 +55,8 @@ class Grid extends Component {
 
 function mapStateToProps(state) {
   return {
-    grid: state.grid
+    grid: state.grid,
+    search: state.search
   };
 }
 
