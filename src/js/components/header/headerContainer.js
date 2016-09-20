@@ -13,6 +13,7 @@ class Header extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleType = this.handleType.bind(this);
 
   }
 
@@ -25,10 +26,26 @@ class Header extends Component {
     this.setState({text: e.target.value});
   }
 
+  handleType() {
+
+  }
+
   render() {
+
+    const types = ['Normal', 'Fire', 'Water', 'Electric', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dragon'];
+
+    let list = types.map((type, index) => {
+      return (
+        <li key={index} onClick={this.handleType}>
+          <a href="#">{type}</a>
+        </li>
+      )
+    })    
+
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
+      <nav className="navbar navbar-default">
         <div className="container-fluid">
+          
           <div className="navbar-header">
             <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span className="sr-only">Toggle navigation</span>
@@ -38,27 +55,26 @@ class Header extends Component {
             </button>
             <a className="navbar-brand" href="/">Pokedex</a>
           </div>
+
+          
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             
-            <form className="navbar-form navbar-left" role="search" onSubmit={this.handleSubmit}>
+            <form className="navbar-form navbar-left" onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <div className="row">
-                  <input type="text" className="form-control" onChange={this.handleChange} value={this.state.text} placeholder="Enter Pokemon Name" />
-                  <button type="submit" className="btn btn-default">Submit</button>
-                </div>
+                <input type="text" className="form-control" onChange={this.handleChange} value={this.state.text} placeholder="Enter Pokemon Name" />
               </div>
+              <button type="submit" className="btn btn-default">Submit</button>
             </form>
 
-            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul className="nav navbar-nav">
-                <li className="dropdown">
-                  <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Organize By Type <span className="caret"></span></a>
-                  <ul className="dropdown-menu">
-                    
-                  </ul>
-                </li>
-              </ul>
-            </div>
+            <ul className="nav navbar-nav">
+              <li className="dropdown">
+                <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Organize By Type <span className="caret"></span></a>
+                <ul className="dropdown-menu">
+                  {list}
+                </ul>
+              </li>
+            </ul>
+
             
           </div>
         </div>

@@ -387,14 +387,14 @@ const pokemon = [
    {
       "name":"Mankey",
       "id":56,
-      "type":["Fight"],
+      "type":["Fighting"],
       "stats":["Hit Points":40, "Attack":80, "Defense":35, "Special Attack":35, "Special Defense":45, "Speed":70],
       "description":"When Mankey starts shaking and its nasal breathing turns rough, it's a sure sign that it is becoming angry. However, because it goes into a towering rage almost instantly, it is impossible for anyone to flee its wrath."
    },
    {
       "name":"Primeape",
       "id":57,
-      "type":["Fight"],
+      "type":["Fighting"],
       "stats":["Hit Points":65, "Attack":105, "Defense":60, "Special Attack":60, "Special Defense":70, "Speed":95],
       "description":"When Primeape becomes furious, its blood circulation is boosted. In turn, its muscles are made even stronger. However, it also becomes much less intelligent at the same time."
    },
@@ -429,7 +429,7 @@ const pokemon = [
    {
       "name":"Poliwrath",
       "id":62,
-      "type":["Water", "Fight"],
+      "type":["Water", "Fighting"],
       "stats":["Hit Points":90, "Attack":95, "Defense":95, "Special Attack":70, "Special Defense":90, "Speed":70],
       "description":"Poliwrath's highly developed, brawny muscles never grow fatigued, however much it exercises. It is so tirelessly strong, this Pokémon can swim back and forth across the ocean without effort."
    },
@@ -457,21 +457,21 @@ const pokemon = [
    {
       "name":"Machop",
       "id":66,
-      "type":["Fight"],
+      "type":["Fighting"],
       "stats":["Hit Points":70, "Attack":80, "Defense":50, "Special Attack":35, "Special Defense":35, "Speed":35],
       "description":"Machop's muscles are special—they never get sore no matter how much they are used in exercise. This Pokémon has sufficient power to hurl a hundred adult humans."
    },
    {
       "name":"Machoke",
       "id":67,
-      "type":["Fight"],
+      "type":["Fighting"],
       "stats":["Hit Points":80, "Attack":100, "Defense":70, "Special Attack":50, "Special Defense":60, "Speed":45],
       "description":"Machoke's thoroughly toned muscles possess the hardness of steel. This Pokémon has so much strength, it can easily hold aloft a sumo wrestler on just one finger."
    },   
    {
       "name":"Machamp",
       "id":68,
-      "type":["Fight"],
+      "type":["Fighting"],
       "stats":["Hit Points":90, "Attack":130, "Defense":80, "Special Attack":65, "Special Defense":85, "Speed":55],
       "description":"Machamp has the power to hurl anything aside. However, trying to do any work requiring care and dexterity causes its arms to get tangled. This Pokémon tends to leap into action before it thinks."
    },
@@ -562,14 +562,14 @@ const pokemon = [
    {
       "name":"Magnemite",
       "id":81,
-      "type":["Electric", "Steel"],
+      "type":["Electric"],
       "stats":["Hit Points":25, "Attack":35, "Defense":70, "Special Attack":95, "Special Defense":55, "Speed":45],
       "description":"Magnemite attaches itself to power lines to feed on electricity. If your house has a power outage, check your circuit breakers. You may find a large number of this Pokémon clinging to the breaker box."
    },
    {
       "name":"Magneton",
       "id":82,
-      "type":["Electric", "Steel"],
+      "type":["Electric"],
       "stats":["Hit Points":50, "Attack":60, "Defense":95, "Special Attack":120, "Special Defense":70, "Speed":70],
       "description":"Magneton emits a powerful magnetic force that is fatal to mechanical devices. As a result, large cities sound sirens to warn citizens of large-scale outbreaks of this Pokémon."
    },
@@ -578,7 +578,7 @@ const pokemon = [
       "id":83,
       "type":["Normal", "Flying"],
       "stats":["Hit Points":52, "Attack":65, "Defense":55, "Special Attack":60, "Special Defense":62, "Speed":60],
-      "description":"Farfetch'd is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks."
+      "description":"Farfetch'd is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fighting with others over stalks."
    },
    {
       "name":"Doduo",
@@ -737,14 +737,14 @@ const pokemon = [
    {
       "name":"Hitmonlee",
       "id":106,
-      "type":["Fight"],
+      "type":["Fighting"],
       "stats":["Hit Points":50, "Attack":120, "Defense":53, "Special Attack":35, "Special Defense":110, "Speed":87],
       "description":"Hitmonlee's legs freely contract and stretch. Using these springlike legs, it bowls over foes with devastating kicks. After battle, it rubs down its legs and loosens the muscles to overcome fatigue."
    },  
    {
       "name":"Hitmonchan",
       "id":107,
-      "type":["Fight"],
+      "type":["Fighting"],
       "stats":["Hit Points":50, "Attack":105, "Defense":79, "Special Attack":35, "Special Defense":110, "Speed":76],
       "description":"Hitmonchan is said to possess the spirit of a boxer who had been working toward a world championship. This Pokémon has an indomitable spirit and will never give up in the face of adversity."
    },  
