@@ -1,5 +1,6 @@
 import { REQUEST_ALL_POKEMON, RECEIVE_ALL_POKEMON } from '../actions/gridActions';
 import { REQUEST_POKEMON_SEARCH, RECEIVE_POKEMON_SEARCH } from '../actions/searchActions';
+import { REQUEST_TYPE, RECEIVE_TYPE } from '../actions/dropdownActions';
 
 export function grid(state = {
   isFetching: false,
@@ -31,7 +32,16 @@ export function grid(state = {
           isFetching: false,
           pokemon: arr
         });
-      }      
+      } 
+    case REQUEST_TYPE:
+      return Object.assign({}, state, {
+        isFetching: true
+      });
+    case RECEIVE_TYPE:
+      return Object.assign({}, state, {
+        isFetching: false,
+        pokemon: action.payload
+      });              
     default:
       return state
   };

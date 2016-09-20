@@ -1,5 +1,3 @@
-//import { pokemon } from '../api/pokeApi';
-
 export const REQUEST_ALL_POKEMON = 'REQUEST_ALL_POKEMON';
 export const RECEIVE_ALL_POKEMON = 'RECEIVE_ALL_POKEMON';
 

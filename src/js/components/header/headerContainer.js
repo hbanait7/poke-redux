@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { searchPokemon } from '../../actions/searchActions';
+import { fetchType } from '../../actions/dropdownActions';
 
 class Header extends Component {
 
@@ -26,8 +27,8 @@ class Header extends Component {
     this.setState({text: e.target.value});
   }
 
-  handleType() {
-
+  handleType(e) {
+    this.props.dispatch(fetchType(e.target.text));
   }
 
   render() {
