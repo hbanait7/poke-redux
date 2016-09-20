@@ -39,6 +39,13 @@ module.exports = {
         DevENV ? ['css-loader?sourceMap', 'postcss-loader?sourceMap', 'sass-loader?sourceMap'] :
         ['css-loader', 'postcss-loader', 'sass-loader']),
       },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/,
+        loader: 'url',
+        query: {
+          name: '[path][name].[ext]?[hash]'
+        }
+      }
     ],
   },
 
