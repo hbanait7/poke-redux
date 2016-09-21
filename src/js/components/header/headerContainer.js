@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { searchPokemon } from '../../actions/searchActions';
 import { fetchType } from '../../actions/dropdownActions';
 
 class Header extends Component {
+  static contextTypes = {
+    router: PropTypes.object
+  };
 
   constructor(props) {
     super(props);
@@ -20,7 +23,9 @@ class Header extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.dispatch(searchPokemon(this.state.text));    
+    this.props.dispatch(searchPokemon(this.state.text));
+    this.context.router.push('/');
+    
   }
 
   handleChange(e) {
@@ -29,10 +34,10 @@ class Header extends Component {
 
   handleType(e) {
     this.props.dispatch(fetchType(e.target.text));
+    this.context.router.push('/');
   }
 
   render() {
-
     const types = ['Normal', 'Fire', 'Water', 'Electric', 'Ice', 'Fighting', 'Poison', 'Ground', 'Flying', 'Psychic', 'Bug', 'Rock', 'Ghost', 'Dragon'];
 
     let list = types.map((type, index) => {
@@ -79,6 +84,7 @@ class Header extends Component {
             
           </div>
         </div>
+        {this.props.children}
       </nav>
     );
   }

@@ -11,7 +11,6 @@ class Grid extends Component {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
-
   }
 
 
@@ -41,7 +40,11 @@ class Grid extends Component {
     const alertStyle = {
       marginTop: '50px',
       textAlign: 'center'
-    }    
+    }  
+
+    const reloadStyle = {
+      textDecoration: 'none'
+    }  
 
     let display;
 
@@ -51,9 +54,8 @@ class Grid extends Component {
           const imgPath = require(`../../api/images/${pokemon.id}.png`);
           return (
             <div key={index} className="col-xs-6 col-md-2">
-              <Link style={aTagStyle} className="thumbnail">
+              <Link style={aTagStyle} to={`/show/${pokemon.id}`} className="thumbnail">
                 <img src={imgPath} style={imgStyle} />
-                <p style={textStyle}>{pokemon.url}</p>
                 <p style={textStyle}>{pokemon.name}</p>
               </Link>
             </div>
@@ -63,8 +65,7 @@ class Grid extends Component {
     } else {
       display = (
         <div className="alert alert-danger center-block" role="alert" style={alertStyle} id="alert">
-          <a href="#" className="close" data-dismiss="alert" aria-label="close" onClick={this.handleClick}>&times;</a>
-          <strong>Pokemon Not Found, Please Try Again!</strong>
+          <strong>Pokemon Not Found, Please Try Again! <a href="#" style={reloadStyle} onClick={this.handleClick}>Reload Pokedex</a></strong>
         </div>
       );      
     }

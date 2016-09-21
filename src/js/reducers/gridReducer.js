@@ -41,7 +41,7 @@ export function grid(state = {
       return Object.assign({}, state, {
         isFetching: false,
         pokemon: action.payload
-      });              
+      });                   
     default:
       return state
   };

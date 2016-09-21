@@ -1,14 +1,11 @@
 import React from 'react';
 import Header from './header/headerContainer';
-import Jumbotron from './jumbotron/jumbotronContainer';
-import Grid from './grid/gridContainer';
 
-const App = () => {
+const App = (props) => {
   return (
     <div>
-      <Header />
-      <Jumbotron />
-      <Grid />
+      <Header/>
+      {props.children}
     </div>
   );
 }
