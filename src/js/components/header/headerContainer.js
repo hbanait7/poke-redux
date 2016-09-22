@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+import { fetchAllPokemon } from '../../actions/gridActions';
+import { pokemon } from '../../api/pokeApi';
 import { searchPokemon } from '../../actions/searchActions';
 import { fetchType } from '../../actions/dropdownActions';
 
@@ -15,15 +17,27 @@ class Header extends Component {
       text: ''
     };
 
+    this.handleHome = this.handleHome.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleType = this.handleType.bind(this);
+    this.capitalize = this.capitalize.bind(this);
 
+  }
+
+  capitalize(name) {
+    return name.charAt(0).toUpperCase() + name.slice(1);
+  }
+
+  handleHome(e) {
+    e.preventDefault();
+    this.props.dispatch(fetchAllPokemon(pokemon));
+    this.context.router.push('/');
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.dispatch(searchPokemon(this.state.text));
+    this.props.dispatch(searchPokemon(this.capitalize(this.state.text)));
     this.context.router.push('/');
     
   }
@@ -59,7 +73,7 @@ class Header extends Component {
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="/">Pokedex</a>
+            <a className="navbar-brand" href="#" onClick={this.handleHome}>Pokedex</a>
           </div>
 
           
