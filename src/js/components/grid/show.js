@@ -19,12 +19,9 @@ class Show extends Component {
     const imgStyle = {
       width: '200px',
       height: '200px',
+      display: 'block',
       margin: '0px auto'
-    }   
-
-    const border = {
-      border: '1px solid black'
-    }
+    } 
 
     const commonStyle = {
       textAlign: 'center',
@@ -68,7 +65,7 @@ class Show extends Component {
         types = (
           <div className="text-center" style={typeMrgnBtn}>
             <span style={typeFont}>Type:</span>
-            <button type="button" className="btn btn-default" style={btnStyle}>{pokemon.type[0]}</button>
+            <button type="button" className="btn btn-default disabled" style={btnStyle}>{pokemon.type[0]}</button>
           </div>
         )
       }
@@ -77,9 +74,9 @@ class Show extends Component {
 
       display = (
         <div>
-          <div className="col-md-6 col-sm-offset-3 col-xs-10 col-xs-offset-1" style={border}>
-            <div style={imgStyle}>
-              <img src={imgPath} />
+          <div className="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+            <div>
+              <img src={imgPath} style={imgStyle}/>
             </div>
             <div style={commonStyle}>
               {pokemon.name}
@@ -94,9 +91,8 @@ class Show extends Component {
               {pokemon.description}
             </div>
           </div>
-          <br />
-          <div>
-            <Bar stats={pokemon.stats} />
+          <div className="col-sm-6 col-sm-offset-0 col-xs-10 col-xs-offset-1">
+            <Bar stats={pokemon.stats}  />
           </div>
         </div>
       );      

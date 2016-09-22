@@ -12,9 +12,7 @@ class Bar extends Component {
   
   render() {
 
-    const pokeDataSet = [111, 23, 36, 48, 59, 61];
-
-    const pokeLabels = ['afadsf', 'fasdfa', 'afadsfdsa', 'fasdfads', 'fasdad', 'asdfads'];
+    const pokeLabels = ["Hit Points", "Attack", "Defense", "Special Attack", "Special Defense", "Speed"];
     
     const data = {
       labels: pokeLabels,
@@ -27,15 +25,13 @@ class Bar extends Component {
                       'rgba(153, 102, 255, 0.2)',
                       'rgba(255, 159, 64, 0.2)'
                       ],      
-          data: pokeDataSet
+          data: this.props.stats
         }
       ]
     };
 
     return (
-      <div>
-        <Chart data={data} redraw />
-      </div>
+      <Chart data={data} width='930px' height='500px' options={{responsive: true, maintainAspectRatio: false }} redraw />
     );
   }   
 }
